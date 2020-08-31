@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>calculadora</title>
+    <style>
+      body
+      {
+        background-color:cornflowerblue
+        color:darkkhaki
+      }
+    </style>
+  </head>
+  <body>  
+    <script>
+
+      var operación = prompt("escoje el tipo de operación selecciona la operaciòn que desea realizar 1 es suma 2 es resta 3 es multiplicasiòn 4 es divisiòn");
+      var n1 = prompt("numero_1");
+      var n2 = prompt("numero_2");
+
+      n1 = parseInt(n1);
+      n2 = parseInt(n2);
+
+      var solución;
+      var nombre_op;
+      var nombre_sg;
+
+      if (operación == 1)
+      {
+        solución = n1 + n2;
+        nombre_op = "suma";
+        nombre_sg = "+";
+      }
+      else if (operación == 2)
+      {
+        solución = n1 - n2;
+        nombre_op = "resta";
+        nombre_sg = "-";
+      }
+      else if (operación == 3)
+      {
+        solución = n1 * n2;
+        nombre_op = "multiplicación";
+        nombre_sg = "x";
+      }
+      else if (operación == 4)
+      {
+        solución = n1 / n2;
+        nombre_op = "división";
+        nombre_sg = "➗";
+      }
+      else
+      {
+        solución = "error";
+      }
+      solución = parseInt(solución);
+      document.write("La solución a la " + nombre_op + " <strong>" + n1 +"</strong> "+ nombre_sg +" <strong>"+ n2 +"</strong> es "+ solución);
+    </script>
+
+  </body>
+</html>
